@@ -447,7 +447,7 @@ class Shape(Sequence):
 
     def with_rank(self, rank):
         try:
-            return self.merge_with(unknown_shape(rank=rank))
+            return self.merge_with(rank=rank)
         except ValueError:
             raise ValueError("Shape %s must have rank %d" % (self, rank))
 
